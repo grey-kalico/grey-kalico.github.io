@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>grey-kalico</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f3ef;
+      --ink: #1a1a18;
+      --muted: #7a7970;
+      --rule: #d6d3cc;
+      --accent: #2e4a3e;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+      opacity: 0;
+      animation: fadein 0.8s ease forwards;
+    }
+
+    @keyframes fadein {
+      to { opacity: 1; }
+    }
+
+    header {
+      margin-bottom: 64px;
+      animation: risein 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes risein {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .site-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .site-subtitle {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 40px 0;
+    }
+
+    section {
+      margin-bottom: 56px;
+      opacity: 0;
+      animation: risein 0.8s ease forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-list {
+      list-style: none;
+    }
+
+    .project-list li {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .project-list li:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .project-name {
+      font-size: 0.85rem;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+
+    .project-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .project-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .roadmap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .roadmap-item {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .roadmap-item.active {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .roadmap-sep {
+      color: var(--rule);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-title">grey-kalico</div>
+    <div class="site-subtitle">IT — Cybersecurity — Network Engineering</div>
+  </header>
+
+  <section>
+    <div class="section-label">Overview</div>
+    <p>This is a working log of things I am learning and building. I am currently studying for the CompTIA A+ certification, with a long-term interest in cybersecurity and network engineering.</p>
+    <p>Everything here is a work in progress. Notes are rough, setups are experimental, and write-ups reflect where I am in the process rather than where I am going.</p>
+  </section>
+
+  <hr />
+
+  <section>
+    <div class="section-label">Projects</div>
+    <ul class="project-list">
+      <li>
+        <div>
+          <div class="project-name">Virtual Machine Setups</div>
+          <p class="project-desc">Lab environments built in VirtualBox. Windows and Linux installs, configuration notes, and things that went wrong along the way.</p>
+        </div>
+        <div class="project-tag">Lab</div>
+      </li>
+      <li>
+        <div>
+          <div class="project-name">CTF Attempts</div>
+          <p class="project-desc">Beginner-level capture-the-flag write-ups. The goal is to build the habit of thinking methodically about security problems.</p>
+        </div>
+        <div class="project-tag">Security</div>
+      </li>
+      <li>
+        <div>
+          <div class="project-name">Arduino Projects</div>
+          <p class="project-desc">Small electronics and programming experiments. Basic input/output to start, and whatever else seems worth wiring up.</p>
+        </div>
+        <div class="project-tag">Hardware</div>
+      </li>
+      <li>
+        <div>
+          <div class="project-name">Study Notes</div>
+          <p class="project-desc">Working documents from the CompTIA A+ syllabus. Not polished guides — just notes that reflect where I am in the learning process.</p>
+        </div>
+        <div class="project-tag">Study</div>
+      </li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <div class="section-label">Certification Roadmap</div>
+    <div class="roadmap">
+      <span class="roadmap-item active">CompTIA A+ (in progress)</span>
+      <span class="roadmap-sep">—</span>
+      <span class="roadmap-item">CCNA</span>
+      <span class="roadmap-sep">—</span>
+      <span class="roadmap-item">OSCP</span>
+    </div>
+  </section>
+
+  <hr />
+
+  <footer>
+    github.com/grey-kalico
+  </footer>
+
+</body>
+</html>
