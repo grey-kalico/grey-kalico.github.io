@@ -1,4 +1,4 @@
-# [Your Name]
+# grey-kalico
 
 ## Overview
 
