@@ -19,6 +19,9 @@ The long-term direction is toward cybersecurity operations and network infrastru
 **Study Notes and Write-ups**
 Summaries of concepts I have worked through, mostly from the CompTIA A+ syllabus. These are not polished guides — they are working documents that reflect where I am in the learning process.
 
+📗[CompTIA A+ Daily log](Comptia%20A+/Log.md)
+
+
 **Virtual Machine Setups**
 Documentation of lab environments I have built, including what I installed, how I configured it, and what I ran into along the way. Current setups include Windows and Linux virtual machines using VirtualBox.
 
