@@ -1,3 +1,35 @@
+## 📅 Day 2 — September 3, 2026
+
+**Topic:** 1.1 — Laptop Keyboard Troubleshooting
+
+### What I learned
+
+**Software-first troubleshooting steps for a laptop keyboard before touching hardware:**
+
+Uninstall the keyboard driver (Device Manager) then reboot — Windows reinstalls a fresh copy automatically, which clears out a corrupted driver
+Update the driver manually if a reinstall alone doesn't fix it, in case a newer version resolves the issue
+
+**Physical steps once software is ruled out:**
+
+Remove the keycap to check for debris, a broken retention clip, or damage under the key
+Unseat and reseat the keyboard itself — disconnecting the ribbon cable/connector from the motherboard and reconnecting it, since a loose or dirty connection is a common cause of dead keys or an unresponsive keyboard
+Something that clicked
+
+The troubleshooting order mirrors the general "simplest/least invasive first" logic from CompTIA's troubleshooting methodology — rule out software (drivers) before jumping to hardware (keycaps, connectors). It's the same instinct as checking cables before assuming a part is broken.
+
+### Next up
+
+Want to study keycap replacement on a peripheral/desktop PC keyboard next — different mechanism than a laptop (no ribbon cable to unseat, but mechanical switches, stabilizers, and keycap pullers come into play).
+
+### Real-world connection
+
+This is a classic Tier 1 helpdesk flow: try the free/software fix first (driver reinstall), then move to a quick physical check (keycap, reseating) before escalating to hardware replacement or depot repair.
+
+### Practice / resources used
+Video walkthrough on laptop keyboard troubleshooting (driver uninstall/update, keycap removal, unseating/reseating the keyboard)
+
+---
+
 ## 📅 Day 1 — September 1, 2026
 
 **Topic:** 1.1 — Monitor Mobile Device Hardware + Replacement Techniques (Battery Health)
@@ -27,3 +59,4 @@ Helpdesk (Tier 1) usually just diagnoses (report, charger swap, reseat) — actu
 - Hands-on: ran `powercfg /batteryreport` and `powercfg.cpl` myself
 
 ---
+
