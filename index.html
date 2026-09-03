@@ -90,17 +90,15 @@
       text-transform: uppercase;
     }
 
-    .title-wrapper {
-      display: flex;
-      align-items: center; /* Centers logo and text vertically */
-      gap: 4px;           /* Space between the image and heading */
+    .site-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-left: -8px;   /* Nudges the logo left to align flush with the 'g' */
+      margin-bottom: 8px;  /* Keeps a clean gap between the logo and heading */
+      display: block;
     }
 
-    .site-logo {
-      width: 120px;         /* Adjust width to match your heading font size */
-      height: 120px;        /* Keep height equal to width for a square aspect ratio */
-      object-fit: contain;
-    }
     
     hr {
       border: none;
