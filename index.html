@@ -90,6 +90,18 @@
       text-transform: uppercase;
     }
 
+    .title-wrapper {
+      display: flex;
+      align-items: center; /* Centers logo and text vertically */
+      gap: 4px;           /* Space between the image and heading */
+    }
+
+    .site-logo {
+      width: 120px;         /* Adjust width to match your heading font size */
+      height: 120px;        /* Keep height equal to width for a square aspect ratio */
+      object-fit: contain;
+    }
+    
     hr {
       border: none;
       border-top: 1px solid var(--rule);
@@ -201,9 +213,12 @@
 <body>
 
   <header>
+  <div class="title-wrapper">
     <div class="site-title">grey-kalico</div>
-    <div class="site-subtitle">Learning log — IT & cybersecurity</div>
-  </header>
+    <img src="Kalico.png" alt="Grey Kalico Logo" class="site-logo"/>
+  </div>
+  <div class="site-subtitle">Learning log — IT & cybersecurity</div>
+</header>
 
   <section>
     <div class="section-label">Overview</div>
